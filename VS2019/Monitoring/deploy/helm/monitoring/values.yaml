@@ -8,7 +8,7 @@ service:
 replicas: 2
 
 resources:
-  cpu: "500"
+  cpu: "500m"
   memory: "256Mi"
 
 secret:
