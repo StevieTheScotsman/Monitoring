@@ -1,0 +1,19 @@
+image:
+  repository: mtkmonacr.azurecr.io/monitoring
+  tag: latest
+
+service:
+  port: 80
+
+replicas: 2
+
+resources:
+  cpu: "500m"
+  memory: "256Mi"
+
+secret:
+  secretName: "secret-appsettings"
+
+ingress:
+  annotations:
+    nginx.ingress.kubernetes.io/whitelist-source-range: 207.237.250.107/24,72.128.99.116/24
