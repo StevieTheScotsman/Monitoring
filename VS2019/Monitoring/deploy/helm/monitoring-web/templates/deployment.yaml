@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: monitoring
-  name: monitoring
+    app: monitoring-web
+  name: monitoring-web
 spec:
   replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
-      app: monitoring
+      app: monitoring-web
   template:
     metadata:
       labels:
-        app: monitoring
+        app: monitoring-web
     spec:
       containers:
-      - name: monitoring
+      - name: monitoring-web
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         resources:
           requests:

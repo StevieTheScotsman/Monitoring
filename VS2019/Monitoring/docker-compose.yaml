@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  monitoring:
-    image: mtkmonacr.azurecr.io/monitoring
+  monitoring-web:
+    image: mtkmonacr.azurecr.io/monitoring-web
     build: .
     ports:
       - 8080:80

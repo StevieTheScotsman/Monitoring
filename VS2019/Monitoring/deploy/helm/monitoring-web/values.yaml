@@ -1,5 +1,5 @@
 image:
-  repository: mtkmonacr.azurecr.io/monitoring
+  repository: mtkmonacr.azurecr.io/monitoring-web
   tag: latest
 
 service:
@@ -12,7 +12,7 @@ resources:
   memory: "256Mi"
 
 secret:
-  secretName: "secret-appsettings"
+  secretName: "monitoring-web-appsettings"
 
 ingress:
   annotations:
